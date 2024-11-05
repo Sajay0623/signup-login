@@ -1,12 +1,14 @@
- *{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0PX;
-
- }
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 
 #container {
   width: 100%;
   height: 100vh;
-  background-image: ;
+  background-image: linear-gradient(rgba(0, 0, 80, 0.8), rgba(0, 0, 80, 0.8)),
+    url("https://mynbc15.com/resources/media2/1317x740/1317/648/0x14/80/3fd748e2-389e-40ba-8414-aca1314b01c2-friends6.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
