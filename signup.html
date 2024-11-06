@@ -5,8 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="signup.css" />
     <title>Sign-in and sign-up</title>
+    <script
+      src="https://kit.fontawesome.com/934b202d14.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+  <style>
+   
+    .form-box {
+      width: 450px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px solid red;
+      transform: translate(-40%, -40%);
+      padding: 52px 90px 60px 90px;
+      background: white;
+      text-align: center;
+    }
+    
+  </style>
   <body>
-    <div id="container"></div>
+    <div id="container">
+      <div class="form-box">
+        <h1>sign-up</h1>
+        <form action="">
+          <div classname="input-group">
+            <div class="input-field">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" placeholder="Name" />
+            </div>
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" placeholder="email" />
+            </div>
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input type="text" placeholder="password" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
