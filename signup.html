@@ -11,7 +11,6 @@
     ></script>
   </head>
   <style>
-   
     .form-box {
       width: 450px;
       position: absolute;
@@ -23,14 +22,61 @@
       background: white;
       text-align: center;
     }
-    
+
+    .form-box h1 {
+      padding-bottom: 30px;
+      color: cadetblue;
+      font-size: large;
+    }
+
+    .form-box h1::after {
+      content: "";
+      width: 30px;
+      height: 3px;
+      background: red;
+      position: absolute;
+      top: 28%;
+      left: 43%;
+     transform: translateX(50%);
+    }
+
+     
+    .input-field{
+               display: flex;
+              text-align: center;
+              align-items: center;
+              padding-left: 5px;
+              background-color: azure;
+             
+              
+    }
+    .input-field input{
+      /* border: none; */
+      padding: 10px 3px;
+      width: 100%;outline: none;
+      
+    }
+    .input-field i {
+      margin-left: 5px;
+    }
+    .input-group p {
+      
+      
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 5px;
+    }
+    .input-group>p a{
+          text-decoration: none;
+          color: #3c00a0;
+    }
   </style>
   <body>
     <div id="container">
       <div class="form-box">
         <h1>sign-up</h1>
         <form action="">
-          <div classname="input-group">
+          <div class="input-group">
             <div class="input-field">
               <i class="fa-solid fa-user"></i>
               <input type="text" placeholder="Name" />
@@ -43,6 +89,7 @@
               <i class="fa-solid fa-lock"></i>
               <input type="text" placeholder="password" />
             </div>
+            <p>Lost password <a href="#">click here</a></p>
           </div>
         </form>
       </div>
