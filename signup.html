@@ -12,13 +12,13 @@
   </head>
   <style>
     .form-box {
-      width: 450px;
+      width: 400px;
       position: absolute;
       top: 50%;
       left: 50%;
       border: 1px solid red;
       transform: translate(-40%, -40%);
-      padding: 52px 90px 60px 90px;
+      padding: 40px 70px 60px 60px;
       background: white;
       text-align: center;
     }
@@ -35,8 +35,8 @@
       height: 3px;
       background: red;
       position: absolute;
-      top: 28%;
-      left: 43%;
+      top: 20%;
+      left: 41%;
      transform: translateX(50%);
     }
 
@@ -46,18 +46,27 @@
               text-align: center;
               align-items: center;
               padding-left: 5px;
-              background-color: azure;
-             
+              background-color: rgb(157, 188, 188);
+             border-radius: 10px;
+             margin: 5px 0px;
+             max-height: 65px;
+             /* border: 1px solid red; */
+             transition: max-height 0.5s;
+             overflow: hidden;
               
     }
     .input-field input{
-      /* border: none; */
-      padding: 10px 3px;
+      border: none;
+      padding: 10px 8px;
       width: 100%;outline: none;
+      background: transparent;
+      
+       
       
     }
     .input-field i {
       margin-left: 5px;
+      color: #e0dce6;
     }
     .input-group p {
       
@@ -70,14 +79,40 @@
           text-decoration: none;
           color: #3c00a0;
     }
+    .button-field{
+      width: 100%;
+      margin-top: 10px;
+      /* border: 1px solid red; */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
+    }
+    .btn-1, .btn-2{
+        flex-basis: 48%;
+        height: auto;
+        background: rgb(91, 91, 216);
+        border: none;
+        padding: 8px 10px;
+        border-radius: 50px;
+        cursor: pointer;
+       
+
+    }
+    .button-field button:hover{
+      background: rgb(66, 41, 111);
+    }
+    button.dissable{
+          background: #e0dce6;
+    }
   </style>
   <body>
     <div id="container">
       <div class="form-box">
-        <h1>sign-up</h1>
+        <h1 id="title">Sign Up</h1>
         <form action="">
           <div class="input-group">
-            <div class="input-field">
+            <div class="input-field" id="nameField" >
               <i class="fa-solid fa-user"></i>
               <input type="text" placeholder="Name" />
             </div>
@@ -91,8 +126,35 @@
             </div>
             <p>Lost password <a href="#">click here</a></p>
           </div>
+          <div class="button-field">
+          <button type="button" id="signUp" class = "btn-1" >sign-up</button>
+          <button type="button"  id="signIn" class = "btn-2 dissable" >sign-in</button>
+          </div>
         </form>
       </div>
     </div>
   </body>
+  <script>
+       let signIn = document.getElementById("signIn")
+       let signUp = document.getElementById("signUp")
+       let name = document.getElementById("nameField")
+       let title = document.getElementById("title")
+   
+         signIn.addEventListener("click", function(){
+              console.log("check signIn button is working fine");
+               title.innerHTML = "Sign In"
+              name.style.maxHeight = "0"
+             
+              signUp.classList.add("dissable")
+              signIn.classList.remove("dissable")
+
+         })
+         signUp.addEventListener("click" , function(){
+          title.innerHTML = "Sign Up"
+          name.style.maxHeight = "65px"
+          signIn.classList.add("dissable")
+          signUp.classList.remove("dissable")
+         })
+
+  </script>
 </html>
