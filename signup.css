@@ -13,3 +13,91 @@
   background-size: cover;
   position : relative;   
 }
+ .form-box {
+      width: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px solid red;
+      transform: translate(-40%, -40%);
+      padding: 40px 70px 60px 60px;
+      background: white;
+      text-align: center;
+    }
+
+    .form-box h1 {
+      padding-bottom: 30px;
+      color: cadetblue;
+      font-size: large;
+    }
+
+    .form-box h1::after {
+      content: "";
+      width: 30px;
+      height: 3px;
+      background: red;
+      position: absolute;
+      top: 17%;
+      left: 41%;
+      transform: translateX(50%);
+    }
+
+    .input-field {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      padding-left: 5px;
+      background-color: rgb(157, 188, 188);
+      border-radius: 10px;
+      margin: 5px 0px;
+      max-height: 65px;
+      /* border: 1px solid red; */
+      transition: max-height 0.5s;
+      overflow: hidden;
+    }
+    .input-field input {
+      border: none;
+      padding: 10px 8px;
+      width: 100%;
+      outline: none;
+      background: transparent;
+      margin-left: 3px;
+    }
+    .input-field i {
+      margin-left: 5px;
+      color: #e0dce6;
+    }
+    .input-group p {
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 5px;
+    }
+    .input-group > p a {
+      text-decoration: none;
+      color: #3c00a0;
+    }
+    .button-field {
+      width: 100%;
+      margin-top: 10px;
+      /* border: 1px solid red; */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
+    }
+    .btn-1,
+    .btn-2 {
+      flex-basis: 48%;
+      height: auto;
+      background: rgb(91, 91, 216);
+      border: none;
+      padding: 8px 10px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    .button-field button:hover {
+      background: rgb(66, 41, 111);
+    }
+    button.dissable {
+      background: #e0dce6;
+    }
